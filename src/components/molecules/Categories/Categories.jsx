@@ -1,5 +1,5 @@
 // import "./App.css";
-import CategoryItem from "../../molecules/CategoryItem/CategoryItem";
+import CategoryItem from "../CategoryItem/CategoryItem";
 import "./Categories.scss";
 
 const Categories = ({ categories }) => {
