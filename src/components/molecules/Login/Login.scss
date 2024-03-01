@@ -1,0 +1,21 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+
+    .button-wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+}
+
+.buttons-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  
+}

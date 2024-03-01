@@ -1,16 +1,16 @@
 // import "./App.css";
 import "./App.scss";
-import Home from "./components/pages/home/Home";
+
 import { Route, Routes } from "react-router-dom";
 import Navigation from "./components/atoms/Navigation/Navigation";
-import Login from "./components/pages/sign-in/Login";
-
+import Authentication from "./components/pages/Authentication/Authentication";
+import Home from "./components/pages/Home/Home";
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Navigation />}>
         <Route index element={<Home />}></Route>
-        <Route path="login" element={<Login />}></Route>
+        <Route path="authentication" element={<Authentication />}></Route>
       </Route>
     </Routes>
   );
