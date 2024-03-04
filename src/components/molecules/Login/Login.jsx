@@ -11,14 +11,15 @@ import {
 import Button from "../../atoms/Button/Button";
 import FormInput from "../../atoms/FormInput/FormInput";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const defualtFormFields = {
-  displayName: "",
   email: "",
   password: "",
-  confirmPassword: "",
 };
 const Login = () => {
+  const navigate = useNavigate();
+
   const [formFields, setFormFields] = useState(defualtFormFields);
   const { email, password } = formFields;
 
@@ -43,8 +44,7 @@ const Login = () => {
   }, []); // The empty
 
   const loginWithGoogle = async () => {
-    const { user } = await signInWithGooglePopup();
-    createUserDocumentFromAuth(user);
+    await signInWithGooglePopup();
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -55,8 +55,8 @@ const Login = () => {
         password
       );
       if (user) {
-        createUserDocumentFromAuth(user);
         resetForm();
+        navigate("/");
       }
     } catch {
       alert("Invalid credentials!");

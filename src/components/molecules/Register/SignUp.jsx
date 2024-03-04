@@ -37,13 +37,8 @@ const SignUp = () => {
         email,
         password
       );
-      if (user) {
-        const resp = await createUserDocumentFromAuth(user, { displayName });
-        if (!resp) {
-          alert("User succesfully signed in!");
-          resetForm();
-        }
-      }
+      await createUserDocumentFromAuth(user, { displayName });
+      resetForm();
     } catch (error) {
       alert(`Unable to create user ${displayName} reason: ${error}`);
     }
@@ -84,8 +79,8 @@ const SignUp = () => {
           required
           autoComplete="true"
           onChange={handleChange}
-          name="password"
-          value={password}
+          name="confirmPassword"
+          value={confirmPassword}
         />
         <Button buttonType="google" type="submit">
           Sign Up
