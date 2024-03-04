@@ -5,6 +5,7 @@ import Navigation from "./components/molecules/Navigation/Navigation";
 import Authentication from "./components/pages/Authentication/Authentication";
 import Home from "./components/pages/Home/Home";
 import Shop from "./components/pages/Shop/Shop";
+import Checkout from "./components/pages/Checkout/Checkout";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route index element={<Home />}></Route>
         <Route path="authentication" element={<Authentication />}></Route>
         <Route path="shop" element={<Shop />}></Route>
+        <Route path="checkout" element={<Checkout />}></Route>
       </Route>
     </Routes>
   );
