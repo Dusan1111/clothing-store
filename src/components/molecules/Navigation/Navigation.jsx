@@ -8,7 +8,7 @@ import "./Navigation.scss";
 import { useContext } from "react";
 import { signOutUser } from "../../../utils/firebase/firebase.utils";
 import CartIcon from "../../atoms/CartIcon/CartIcon";
-import CartDropdown from "../../atoms/CartDropdown/CartDropdown";
+import CartDropdown from "../CartDropdown/CartDropdown";
 import { UserContext } from "../../../context/UserContext";
 import { CartContext } from "../../../context/CartContext";
 
