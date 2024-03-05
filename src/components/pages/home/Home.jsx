@@ -1,5 +1,5 @@
 // import "./App.css";
-import Categories from "../../molecules/Categories/Categories";
+import Categories from "../../molecules/Directory/Directory";
 
 const Home = () => {
   const categories = [
