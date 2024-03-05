@@ -1,5 +1,5 @@
 // import "./App.css";
-import DirectoryItem from "../../molecules/Directory/Directory";
+import Directory from "../../molecules/Directory/Directory";
 
 const Home = () => {
   const categories = [
@@ -30,7 +30,7 @@ const Home = () => {
     },
   ];
 
-  return <DirectoryItem categories={categories}></DirectoryItem>;
+  return <Directory categories={categories}></Directory>;
 };
 
 export default Home;
